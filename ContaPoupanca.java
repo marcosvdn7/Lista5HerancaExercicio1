@@ -1,4 +1,4 @@
-package ListaOOB5HerançaExercicio1;
+package Lista5HerancaExercicio1;
 
 public class ContaPoupanca extends ContaBancaria {
 
