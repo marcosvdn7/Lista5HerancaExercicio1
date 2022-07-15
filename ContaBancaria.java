@@ -50,8 +50,6 @@ public abstract class ContaBancaria {
 		} else {
 			return false;
 		}
-
-		return false;
 	}
 
 	public void depositar(double valor) {

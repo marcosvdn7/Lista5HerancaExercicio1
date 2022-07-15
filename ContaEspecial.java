@@ -23,6 +23,7 @@ public class ContaEspecial extends ContaBancaria {
 		this.limite = limite;
 	}
 	
+	@Override
 	public boolean sacar (double valor) {
 		double resto = 0;
 		if (valor > super.getSaldo() + this.limite) {
@@ -51,6 +52,7 @@ public class ContaEspecial extends ContaBancaria {
 		return false;
 	} 
 	
+	
 	public void depositar (double valor, double limiteMax) {
 		if (this.limite < limiteMax && super.getSaldo() <= 0) {
 			this.limite += valor;
@@ -63,12 +65,7 @@ public class ContaEspecial extends ContaBancaria {
 		}
 	}
 	
-	public void mostrarInfo() {
-		System.out.println("Conta Especial!");
-		super.mostrarInfo();
-		System.out.println("Valor do Limite Especial: " +this.limite);
-		System.out.println("---------------------------");
-	}
+	
 	
 	public void mostrarLimite() {
 		System.out.println(this.limite);
