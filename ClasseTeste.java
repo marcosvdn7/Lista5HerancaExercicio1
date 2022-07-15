@@ -130,7 +130,7 @@ public class ClasseTeste {
 					System.out.println("---------------------------");break;
 					
 				case 4: 
-					conta.mostrarInfo();
+					//conta.mostrarInfo();
 					System.out.println();
 				}
 			}
