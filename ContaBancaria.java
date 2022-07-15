@@ -1,4 +1,4 @@
-package Lista5HerancaExercicio1;
+package Lista5HerancaExercicio1.Lista5HerancaExercicio1;
 
 public abstract class ContaBancaria {
 	private String nomeCliente;

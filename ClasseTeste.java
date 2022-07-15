@@ -1,4 +1,4 @@
-package Lista5HerancaExercicio1;
+package Lista5HerancaExercicio1.Lista5HerancaExercicio1;
 
 import java.util.Scanner;
 
@@ -6,6 +6,8 @@ public class ClasseTeste {
 
 	public static void main(String[] args) {
 		Scanner read = new Scanner(System.in);
+		
+		//teste
 		
 		String nomeCliente;
 		String numConta;
@@ -59,7 +61,7 @@ public class ClasseTeste {
 						System.out.println("Saldo Atual: " +conta.getSaldo());
 						System.out.println("---------------------------");break;
 					} else {
-						System.out.println("Não foi possível realizar o saque!");break;
+						System.out.println("Nï¿½o foi possï¿½vel realizar o saque!");break;
 					}
 					
 				case 2:
