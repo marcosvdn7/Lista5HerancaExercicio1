@@ -7,8 +7,6 @@ public class ClasseTeste {
 	public static void main(String[] args) {
 		Scanner read = new Scanner(System.in);
 		
-		//teste
-		
 		String nomeCliente;
 		String numConta;
 		int opcao;
