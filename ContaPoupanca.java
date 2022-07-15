@@ -34,10 +34,5 @@ public class ContaPoupanca extends ContaBancaria {
 		return super.getSaldo();
 	}
 	
-	public void mostrarInfo() {
-		super.mostrarInfo();
-		System.out.println("Dia do Rendimento: " +this.diaRendimento);
-		System.out.println("---------------------------");
-	}
 	
 }

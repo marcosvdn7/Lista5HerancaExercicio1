@@ -21,7 +21,6 @@ public class ClasseTeste2 {
 			System.out.println("4 - Encerrar.");
 			opcao = read.nextInt();
 			
-			while (opcao != 4) {
 				if (opcao == 1) {
 					ContaEspecial contaEspecial = new ContaEspecial();
 					
@@ -43,6 +42,7 @@ public class ClasseTeste2 {
 							break;
 						}
 					}
+					
 				} else if (opcao == 2) {
 					ContaPoupanca contaPoupanca = new ContaPoupanca();
 					
@@ -59,7 +59,7 @@ public class ClasseTeste2 {
 					contaPoupanca.setDiaRendimento(read.next());
 					
 					for (int i = 0; i < contasEspeciais.length; i++) {
-						if (contasEspeciais[i] == null) {
+						if (contasPoupancas[i] == null) {
 							contasPoupancas[i] = contaPoupanca;
 							break;
 						}
@@ -70,20 +70,16 @@ public class ClasseTeste2 {
 					
 					for (int i = 0; i < contasEspeciais.length; i++) {
 						if (numConta.equals(contasEspeciais[i].getNumConta())){
-							//mostra o menu de opcoes sacar, depositar e mostrar informações de uma conta especial.
+							System.out.println("FUNCIONA");
+							break;
 						} else if (numConta.equals(contasPoupancas[i].getNumConta())) {
-							//mostra o menu de opcoes sacar, depositar e mostrar informações de uma conta poupanca.
+							System.out.println("FUNCIONA");
+							break;
 						}
 					}
 				}
-			}
-			
-			
-			
 		}
 
 		read.close();
-		
 	}
-
 }
