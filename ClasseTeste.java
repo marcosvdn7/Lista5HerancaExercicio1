@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class ClasseTeste {
 
 	public static void main(String[] args) {
+		//teste
 		Scanner read = new Scanner(System.in);
 		
 		String nomeCliente;

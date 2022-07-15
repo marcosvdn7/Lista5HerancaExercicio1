@@ -20,6 +20,8 @@ public class ClasseTeste2 {
 			
 		}
 
+		read.close();
+		
 	}
 
 }
