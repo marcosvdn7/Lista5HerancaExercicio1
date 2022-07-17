@@ -1,24 +1,41 @@
+/**
+ * Conta Bancaria
+ * @date jul/2022
+ * @authors Ana Júlia da Cunha - Entra21
+ * 			Gabriel Roger da Cunha - Entra21
+ * 			Marcos Vinicius do Nascimento - Entra21
+ * 	
+ * Lista 5: Exercicio 1.
+ */
+
 package Lista5HerancaExercicio1.Lista5HerancaExercicio1;
 
 public abstract class ContaBancaria {
+
+	// ATRIBUTOS DE INSTANCIA
+
 	private String nomeCliente;
 	private String numConta;
 	private double saldo;
 
-	public ContaBancaria() {
+	// CONSTRUTORES
+
+	protected ContaBancaria() {
 	}
 
-	public ContaBancaria(String nomeCliente, String numConta, double saldo) {
+	protected ContaBancaria(String nomeCliente, String numConta) {
+		this.nomeCliente = nomeCliente;
+		this.numConta = numConta;
+	}
+
+	protected ContaBancaria(String nomeCliente, String numConta, double saldo) {
 		this.nomeCliente = nomeCliente;
 		this.numConta = numConta;
 		this.saldo = saldo;
 	}
 
-	public ContaBancaria(String nomeCliente, String numConta) {
-		this.nomeCliente = nomeCliente;
-		this.numConta = numConta;
-	}
-
+	// GETTERS E SETTERS
+	
 	public String getNomeCliente() {
 		return nomeCliente;
 	}
@@ -43,6 +60,8 @@ public abstract class ContaBancaria {
 		this.saldo = saldo;
 	}
 
+	// METODOS
+	
 	public boolean sacar(double valor) {
 		if (this.saldo != 0 && valor <= this.saldo) {
 			this.saldo -= valor;
@@ -57,7 +76,7 @@ public abstract class ContaBancaria {
 	}
 
 	@Override
-	public String toString() {
+	protected String toString() {
 		return "\n---------------------------" + "\nNome: " + nomeCliente + "" + "\nNumero da conta: " + numConta + ""
 				+ "\nSaldo: " + saldo + "\n";
 	}
