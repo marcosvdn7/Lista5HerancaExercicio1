@@ -35,7 +35,7 @@ public abstract class ContaBancaria {
 	}
 
 	// GETTERS E SETTERS
-	
+
 	public String getNomeCliente() {
 		return nomeCliente;
 	}
@@ -61,9 +61,17 @@ public abstract class ContaBancaria {
 	}
 
 	// METODOS
-	
+
+	/**
+	 * Saca um valor na conta bancaria se a mesma possuir saldo suficiente.
+	 * 
+	 * @param valor a ser sacado em <code>double</code>.
+	 * @return <code>true</code> se a transacao foi efetuada com sucesso ou
+	 *         <code>false</code> caso falhe.
+	 */
 	public boolean sacar(double valor) {
-		if (this.saldo != 0 && valor <= this.saldo) {
+		if (valor > 0 && valor <= this.saldo) {
+			// SE O VALOR FOR MAIOR QUE ZERO E MENOR OU IGUAL AO SALDO, O VALOR É SACADO
 			this.saldo -= valor;
 			return true;
 		} else {
@@ -71,6 +79,11 @@ public abstract class ContaBancaria {
 		}
 	}
 
+	/**
+	 * Deposita um valor na conta bancaria.
+	 * 
+	 * @param valor a ser depositado em <code>double</code>.
+	 */
 	public void depositar(double valor) {
 		this.saldo += valor;
 	}
