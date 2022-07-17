@@ -94,7 +94,7 @@ public abstract class ContaBancaria {
 	/**
 	 * Saca um valor na conta bancaria se a mesma possuir saldo suficiente.
 	 * 
-	 * @param valor a ser sacado em <code>double</code>.
+	 * @param valor precisa ser um <code>double</code> maior que 0 (zero).
 	 * @return <code>true</code> se a transacao foi efetuada com sucesso ou
 	 *         <code>false</code> caso falhe.
 	 */
