@@ -36,26 +36,55 @@ public abstract class ContaBancaria {
 
 	// GETTERS E SETTERS
 
+	/**
+	 * Informa o nome do cliente dono da conta.
+	 * 
+	 * @return o nome como <code>String</code>.
+	 */
 	public String getNomeCliente() {
 		return nomeCliente;
 	}
 
+	/**
+	 * Define o nome do cliente dono da conta.
+	 * @param nomeCliente em <code>String</code> para definir.
+	 */
 	public void setNomeCliente(String nomeCliente) {
 		this.nomeCliente = nomeCliente;
 	}
 
+	/**
+	 * Informa o numero da conta.
+	 * 
+	 * @return o numero como <code>String</code>.
+	 */
 	public String getNumConta() {
 		return numConta;
 	}
 
+	/**
+	 * Define o numero da conta
+	 * @param numConta em <code>String</code> para definir.
+	 */
 	public void setNumConta(String numConta) {
 		this.numConta = numConta;
 	}
 
+	/**
+	 * Informa o saldo da conta.
+	 * 
+	 * @return o saldo como <code>double</code>.
+	 */
 	public double getSaldo() {
 		return saldo;
 	}
 
+	/**
+	 * Define o saldo da conta corrente.
+	 * 
+	 * @param saldo em <code>double</code> para definir, nao tem nada haver com
+	 *              saque e deposito.
+	 */
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
