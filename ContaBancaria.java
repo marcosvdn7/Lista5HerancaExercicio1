@@ -27,10 +27,11 @@ public abstract class ContaBancaria {
 	}
 
 	/**
-	 * Construtor da classe ContaBancaria. 
+	 * Construtor da classe ContaBancaria que so requere o nome do cliente e o
+	 * numero da conta.
 	 * 
 	 * @param nomeCliente nome do cliente.
-	 * @param numConta numero da conta em <code>String</code>.
+	 * @param numConta    numero da conta em <code>String</code>.
 	 */
 	protected ContaBancaria(String nomeCliente, String numConta) {
 		this.nomeCliente = nomeCliente;
@@ -41,8 +42,8 @@ public abstract class ContaBancaria {
 	 * Construtor da classe ContaBancaria.
 	 * 
 	 * @param nomeCliente nome do cliente.
-	 * @param numConta numero da conta em <code>String</code>.
-	 * @param saldo da conta em <code>double</code>.
+	 * @param numConta    numero da conta em <code>String</code>.
+	 * @param saldo       da conta em <code>double</code>.
 	 */
 	protected ContaBancaria(String nomeCliente, String numConta, double saldo) {
 		this.nomeCliente = nomeCliente;
@@ -63,6 +64,7 @@ public abstract class ContaBancaria {
 
 	/**
 	 * Define o nome do cliente dono da conta.
+	 * 
 	 * @param nomeCliente em <code>String</code> para definir.
 	 */
 	public void setNomeCliente(String nomeCliente) {
@@ -80,6 +82,7 @@ public abstract class ContaBancaria {
 
 	/**
 	 * Define o numero da conta
+	 * 
 	 * @param numConta em <code>String</code> para definir.
 	 */
 	public void setNumConta(String numConta) {
