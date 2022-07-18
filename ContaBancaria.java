@@ -17,7 +17,6 @@ public abstract class ContaBancaria {
 	private String nomeCliente;
 	private String numConta;
 	private double saldo;
-	private ContaBancaria[] contas;
 
 	// CONSTRUTORES
 
