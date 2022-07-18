@@ -1,4 +1,4 @@
-package Lista5HerancaExercicio1.Lista5HerancaExercicio1;
+package Lista5HerancaExercicio1;
 
 import java.util.Scanner;
 
@@ -78,7 +78,7 @@ public class ClasseTeste {
 					System.out.println("---------------------------");break;
 					
 				case 4: 
-					conta.mostrarInfo();
+					conta.toString();
 				}
 			}
 			
@@ -86,15 +86,15 @@ public class ClasseTeste {
 			ContaEspecial conta = new ContaEspecial(nomeCliente, numConta);
 			
 			System.out.println("Informe o valor do limite especial: ");
-			conta.setLimite(read.nextDouble());
-			limiteMaximo = conta.getLimite();
+			conta.setLimiteMaximo(read.nextDouble());
+			limiteMaximo = conta.getLimiteAtual();
 			
 			System.out.println("Informe o saldo da conta: ");
 			conta.setSaldo(read.nextDouble());
 			
 			while (opcao != 5) {
 				System.out.println("Saldo Atual: " +conta.getSaldo());
-				System.out.println("Limite Especial Atual: " +conta.getLimite());
+				System.out.println("Limite Especial Atual: " +conta.getLimiteAtual());
 				System.out.println("---------------------------");
 				System.out.println("1 - Sacar.");
 				System.out.println("2 - Depositar.");
@@ -111,7 +111,7 @@ public class ClasseTeste {
 						System.out.println("Saque efetuado com sucesso!");
 						System.out.println("---------------------------");
 						System.out.println("Saldo Atual: " +conta.getSaldo());
-						System.out.println("Limite Atual: " +conta.limite);
+						System.out.println("Limite Atual: " +conta.getLimiteAtual());
 						System.out.println("---------------------------");break;
 					} else {
 						System.out.println("Nao foi possivel efetuar o saque!!");break;
@@ -119,14 +119,15 @@ public class ClasseTeste {
 					
 				case 2:
 					System.out.println("Informe o valor que deseja depositar: ");
-					conta.depositar(read.nextDouble(), limiteMaximo);
+					conta.depositar(read.nextDouble());
 					System.out.println("---------------------------");
 					System.out.println("Saldo Atual: " +conta.getSaldo());
+					System.out.println("Limite Atual: " +conta.getLimiteAtual());
 					System.out.println("---------------------------");break;
 					
 				case 3:
 					System.out.println("---------------------------");
-					System.out.println(conta.getLimite());
+					System.out.println(conta.getLimiteAtual());
 					System.out.println("---------------------------");break;
 					
 				case 4: 

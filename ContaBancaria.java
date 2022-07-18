@@ -8,7 +8,7 @@
  * Lista 5: Exercicio 1.
  */
 
-package Lista5HerancaExercicio1.Lista5HerancaExercicio1;
+package Lista5HerancaExercicio1;
 
 public abstract class ContaBancaria {
 
@@ -17,6 +17,7 @@ public abstract class ContaBancaria {
 	private String nomeCliente;
 	private String numConta;
 	private double saldo;
+	private ContaBancaria[] contas;
 
 	// CONSTRUTORES
 
@@ -137,7 +138,7 @@ public abstract class ContaBancaria {
 	}
 
 	@Override
-	protected String toString() {
+	public String toString() {
 		return "\n---------------------------" + "\nNome: " + nomeCliente + "" + "\nNumero da conta: " + numConta + ""
 				+ "\nSaldo: " + saldo + "\n";
 	}
