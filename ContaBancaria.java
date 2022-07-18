@@ -20,14 +20,30 @@ public abstract class ContaBancaria {
 
 	// CONSTRUTORES
 
+	/**
+	 * Construtor vazio da classe ContaBancaria.
+	 */
 	protected ContaBancaria() {
 	}
 
+	/**
+	 * Construtor da classe ContaBancaria. 
+	 * 
+	 * @param nomeCliente nome do cliente.
+	 * @param numConta numero da conta em <code>String</code>.
+	 */
 	protected ContaBancaria(String nomeCliente, String numConta) {
 		this.nomeCliente = nomeCliente;
 		this.numConta = numConta;
 	}
 
+	/**
+	 * Construtor da classe ContaBancaria.
+	 * 
+	 * @param nomeCliente nome do cliente.
+	 * @param numConta numero da conta em <code>String</code>.
+	 * @param saldo da conta em <code>double</code>.
+	 */
 	protected ContaBancaria(String nomeCliente, String numConta, double saldo) {
 		this.nomeCliente = nomeCliente;
 		this.numConta = numConta;
