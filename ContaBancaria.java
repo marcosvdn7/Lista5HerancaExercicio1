@@ -117,13 +117,13 @@ public abstract class ContaBancaria {
 	 * @return <code>true</code> se a transacao foi efetuada com sucesso ou
 	 *         <code>false</code> caso falhe.
 	 */
-	public boolean sacar(double valor) {
+	public int sacar(double valor) {
 		if (valor > 0 && valor <= this.saldo) {
 			// SE O VALOR FOR MAIOR QUE ZERO E MENOR OU IGUAL AO SALDO, O VALOR É SACADO
 			this.saldo -= valor;
-			return true;
+			return 0;
 		} else {
-			return false;
+			return -5;
 		}
 	}
 
