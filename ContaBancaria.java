@@ -114,8 +114,17 @@ public abstract class ContaBancaria {
 	 * Saca um valor na conta bancaria se a mesma possuir saldo suficiente.
 	 * 
 	 * @param valor precisa ser um <code>double</code> maior que 0 (zero).
-	 * @return <code>true</code> se a transacao foi efetuada com sucesso ou
-	 *         <code>false</code> caso falhe.
+	 * @return um valor <code>int</code> de acordo com o status da operacao.
+	 *         <p>
+	 *         0 = operacao realizada com sucesso;
+	 *         <p>
+	 *         1 = saque realizado com sucesso,mas descontado do limite;
+	 *         <p>
+	 *         -1 = operacao nao realizada por valor nulo ou negativo;
+	 *         <p>
+	 *         -2 = operacao nao realizada por insuficiencia de saldo e limite;
+	 *         <p>
+	 *         -3 = erro inesperado.
 	 */
 	public int sacar(double valor) {
 		if (valor > 0 && valor <= this.saldo) {
@@ -123,7 +132,7 @@ public abstract class ContaBancaria {
 			this.saldo -= valor;
 			return 0;
 		} else {
-			return -5;
+			return -3;
 		}
 	}
 
@@ -131,7 +140,13 @@ public abstract class ContaBancaria {
 	 * Deposita um valor na conta bancaria.
 	 * 
 	 * @param valor a ser depositado em <code>double</code>.
-	 * @return 
+	 * @return um valor <code>int</code> de acordo com o status da operacao.
+	 *         <p>
+	 *         0 = operacao realizada com sucesso;
+	 *         <p>
+	 *         -1 = operacao nao realizada por valor nulo ou negativo;
+	 *         <p>
+	 *         -3 = erro inesperado.
 	 */
 	public int depositar(double valor) {
 		this.saldo += valor;
