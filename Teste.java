@@ -55,6 +55,7 @@ public class Teste {
 
 		// VARIAVEIS DE OPCAO
 		int opcaoPrincipal; // MENU PRINCIPAL
+		int opcaoTipoConta;
 
 		System.out.println("Bem-vindo ao nosso sistema!");
 
@@ -67,6 +68,22 @@ public class Teste {
 			case 1: // ACESSAR CONTA
 				break;
 			case 2: // CADASTRAR CONTA
+				imprimirTipoConta();
+				opcaoTipoConta = sc.nextInt();
+
+				System.out.println("Nome do cliente:");
+				String nome = sc.next();
+				System.out.println("Numero da conta");
+				String numConta = sc.next();
+				
+				if (opcaoTipoConta == 1) {
+					System.out.println("Dia que cai o rendimento:");
+					String diaRendimento = sc.next();
+					
+					
+				}
+				
+
 				break;
 			case 3: // SAIR
 				sair = true;
