@@ -138,7 +138,7 @@ public abstract class ContaBancaria {
 
 	@Override
 	public String toString() {
-		return "\n---------------------------" + "\nNome: " + nomeCliente + "" + "\nNumero da conta: " + numConta + ""
+		return "\n---------------------------" + "\nNome: " + nomeCliente + "\nNumero da conta: " + numConta
 				+ "\nSaldo: " + saldo + "\n";
 	}
 
