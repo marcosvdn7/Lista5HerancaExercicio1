@@ -126,7 +126,7 @@ public abstract class ContaBancaria {
 	 *         <p>
 	 *         -3 = erro inesperado.
 	 */
-	public int sacar(double valor) {
+	protected int sacar(double valor) {
 		if (valor > 0 && valor <= this.saldo) {
 			// SE O VALOR FOR MAIOR QUE ZERO E MENOR OU IGUAL AO SALDO, O VALOR É SACADO
 			this.saldo -= valor;
@@ -148,7 +148,7 @@ public abstract class ContaBancaria {
 	 *         <p>
 	 *         -3 = erro inesperado.
 	 */
-	public int depositar(double valor) {
+	protected int depositar(double valor) {
 		this.saldo += valor;
 		return 0;
 	}
