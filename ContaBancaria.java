@@ -131,9 +131,11 @@ public abstract class ContaBancaria {
 	 * Deposita um valor na conta bancaria.
 	 * 
 	 * @param valor a ser depositado em <code>double</code>.
+	 * @return 
 	 */
-	public void depositar(double valor) {
+	public int depositar(double valor) {
 		this.saldo += valor;
+		return 0;
 	}
 
 	@Override
