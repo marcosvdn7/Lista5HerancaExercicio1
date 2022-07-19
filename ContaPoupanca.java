@@ -80,12 +80,10 @@ public class ContaPoupanca extends ContaBancaria {
 	 * Calcula o novo saldo da poupanca de acordo com o rendimento.
 	 * 
 	 * @param rendimento rendimento da poupanca.
-	 * @return o valor do rendimento em <code>double</code>.
 	 */
-	public double calcularNovoSaldo(double rendimento) {
+	public void calcularNovoSaldo(double rendimento) {
 		rendimento /= 100;
 		super.setSaldo((super.getSaldo() * rendimento) + super.getSaldo());
-		return super.getSaldo();
 	}
 
 	@Override
