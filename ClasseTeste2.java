@@ -10,6 +10,8 @@ public class ClasseTeste2 {
 		ContaEspecial[] contasEspeciais = new ContaEspecial[10];
 		ContaPoupanca[] contasPoupancas = new ContaPoupanca[10];
 		
+		ContaBancaria[] contas = new ContaBancaria[10];
+		
 		int opcao = 0;
 		int opcaoConta = 0;
 		String numConta;
@@ -36,7 +38,7 @@ public class ClasseTeste2 {
 					contaEspecial.setSaldo(read.nextDouble());
 					
 					System.out.println("Informe o valor do limite especial: ");
-					contaEspecial.setLimiteMaximo(read.nextDouble());
+					contaEspecial.setLimiteAtual(read.nextDouble());
 					
 					for (int i = 0; i < contasEspeciais.length; i++) {
 						if (contasEspeciais[i] == null) {
@@ -71,8 +73,7 @@ public class ClasseTeste2 {
 					numConta = read.next();
 					
 					for (int i = 0; i < contasEspeciais.length; i++) {
-						ContaEspecial contaAux = contasEspeciais[i];
-						if (contaAux == null) {
+						if (contasEspeciais[i] == null) {
 							break;
 						}
 						if (numConta.equals(contasEspeciais[i].getNumConta())){
@@ -92,7 +93,7 @@ public class ClasseTeste2 {
 								case 1: 
 									System.out.println("Informe o valor que deseja sacar: ");
 									valor = read.nextDouble();
-									if (contasEspeciais[i].sacar(valor) == true) {
+									if (contasEspeciais[i].sacar(valor) == 0) {
 										System.out.println("Saque realizado com sucesso!");
 										System.out.println("Novo Saldo = " +contasEspeciais[i].getSaldo());
 										System.out.println("Novo Limite = " +contasEspeciais[i].getLimiteAtual());break;
@@ -119,8 +120,7 @@ public class ClasseTeste2 {
 					}
 					
 					for (int i = 0; i < contasPoupancas.length; i++) {
-						ContaPoupanca contaAux = contasPoupancas[i]; 
-						if (contaAux == null) {
+						if (contasPoupancas[i] == null) {
 							break;
 						}
 						if (numConta.equals(contasPoupancas[i].getNumConta())){
@@ -140,7 +140,7 @@ public class ClasseTeste2 {
 								case 1: 
 									System.out.println("Informe o valor que deseja sacar: ");
 									valor = read.nextDouble();
-									if (contasPoupancas[i].sacar(valor) == true) {
+									if (contasPoupancas[i].sacar(valor) == 0) {
 										System.out.println("Saque realizado com sucesso!");
 										System.out.println("Novo Saldo = " +contasPoupancas[i].getSaldo());
 									} else {

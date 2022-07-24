@@ -95,7 +95,7 @@ public class ClasseTeste {
 				switch (opcao) {
 				case 1:
 					System.out.println("Informe o valor que deseja sacar: ");
-					if (conta.sacar(read.nextDouble()) == true) {
+					if (conta.sacar(read.nextDouble()) == 0) {
 						System.out.println("Saque efetuado com sucesso!");
 						System.out.println("---------------------------");
 						System.out.println("Saldo Atual: " + conta.getSaldo());
@@ -118,7 +118,7 @@ public class ClasseTeste {
 					System.out.println("Informe o valor do rendimento (em porcentagem): ");
 					valorRendimento = read.nextDouble();
 					System.out.println("---------------------------");
-					System.err.println(conta.calcularNovoSaldo(valorRendimento));
+					//System.err.println(conta.calcularNovoSaldo(valorRendimento));
 					System.out.println("---------------------------");
 					break;
 
@@ -152,7 +152,7 @@ public class ClasseTeste {
 				switch (opcao) {
 				case 1:
 					System.out.println("Informe o valor que deseja sacar: ");
-					if (conta.sacar(read.nextDouble()) == true) {
+					if (conta.sacar(read.nextDouble()) == 0) {
 						System.out.println("Saque efetuado com sucesso!");
 						System.out.println("---------------------------");
 						System.out.println("Saldo Atual: " + conta.getSaldo());

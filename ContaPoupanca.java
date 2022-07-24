@@ -91,5 +91,4 @@ public class ContaPoupanca extends ContaBancaria {
 		return super.toString() + "Tipo de conta: Poupanca" + "\nDia do rendimento: " + diaRendimento
 				+ "\n---------------------------";
 	}
-
 }

@@ -24,7 +24,6 @@ public class ContaEspecial extends ContaBancaria {
 	 */
 	public ContaEspecial() {
 		super();
-		this.limiteAtual = this.limiteMaximo;
 	}
 
 	/**
@@ -104,6 +103,7 @@ public class ContaEspecial extends ContaBancaria {
 
 	@Override
 	public int sacar(double valor) {
+		this.limiteMaximo = this.limiteAtual;
 
 		if (valor <= 0) {
 			return -1; // VALOR NULO OU NEGATIVO
@@ -156,6 +156,7 @@ public class ContaEspecial extends ContaBancaria {
 
 	@Override
 	public int depositar(double valor) {
+		this.limiteMaximo = this.limiteAtual;
 
 		if (valor <= 0) {
 			return -1; // VALOR NULO OU NEGATIVO
@@ -187,5 +188,4 @@ public class ContaEspecial extends ContaBancaria {
 		return super.toString() + "Tipo de conta: Especial" + "\nLimite atual: " + limiteAtual + "\nLimite Maximo: "
 				+ limiteMaximo + "\n---------------------------";
 	}
-
 }
